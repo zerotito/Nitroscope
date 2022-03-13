@@ -267,7 +267,7 @@
           "cluster": document.getElementById('cluster').value,
           "node": document.getElementById('node').value
       }
-      fetch_fni_data(json_data, "http://127.0.0.1:3000/na/metrics/apiv2")
+      fetch_fni_data(json_data, window.location.href + "/apiv2")
       $('#spanfetch').removeClass("spinner-border spinner-border-sm");
       $('#spanfetch').addClass("fa fa-chart-line");
       this.disabled = false

@@ -69,7 +69,7 @@ function fetch_fni_data(json_data, url){
                     "date": selected_date
 
                 }
-                fetch_alarms(json_data, "http://127.0.0.1:3000/na/metrics/apiv4")
+                fetch_alarms(json_data, window.location.href + "/apiv4")
             });
 
             $('#chart_trend').remove();
@@ -92,7 +92,7 @@ function fetch_fni_data(json_data, url){
                     "folder": temp_folder,
                     "kpi": table_counter.row( $(this).parents('tr') ).data()[1]
                 }
-                fetch_analysis_data(json_data, "http://127.0.0.1:3000/na/metrics/apiv3")
+                fetch_analysis_data(json_data, window.location.href + "/apiv3")
             } );
         },
         error: function (xhr, status, error) {

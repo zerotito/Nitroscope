@@ -20,7 +20,7 @@ function fetch_counter_data(json_data, url){
                     "kpi": table_counter.row( $(this).parents('tr') ).data()[1],
                     "kpi text": table_counter.row( $(this).parents('tr') ).data()[2]
                 }
-                fetch_analysis_data(json_data, "http://127.0.0.1:3000/na/counters/apiv2")
+                fetch_analysis_data(json_data, window.location.href + "/apiv2")
             } );
         },
         error: function (xhr, status, error) {
