@@ -1,0 +1,48 @@
+{
+  "title": "Metric Analysis",
+  "webpage": "fe/fe.html",
+  "kpi folder": "Z:\\NITROSCOPE\\NITROSCOPE\\application\\db",
+  "script": "Z:\\NITROSCOPE\\NITROSCOPE\\application\\common\\ad_fe.py",
+  "config": {
+    "groups": {
+      "CGW": {
+        "cluster": ["CGW_POOL1", "CGW_POOL2"],
+        "table": ["TABLE_1"]
+      },
+      "DGW": {
+        "cluster": ["DGW_POOL1", "DGW_POOL2", "DGW_POOL3", "DGW_POOL4", "DGW_POOL5", "DGW_POOL6", "DGW_POOL7", "DGW_POOL8"],
+        "table": ["TABLE_10","TABLE_11","TABLE_12","TABLE_13"]
+      },
+      "USN": {
+        "cluster": ["USN_POOL1", "USN_POOL2", "USN_POOL3"],
+        "table": ["TABLE_14","TABLE_15","TABLE_16"]
+      },
+      "GGSN": {
+        "cluster": ["GGSN_POOL1", "GGSN_POOL2", "GGSN_POOL3", "GGSN_POOL4"],
+        "table": [
+          "TABLE_20","TABLE_21","TABLE_22","TABLE_23","TABLE_24","TABLE_25"
+        ]
+      }
+    },
+    "clusters": {
+        "USN_POOL1": ["USN1", "USN2", "USN3", "USN4"],
+        "USN_POOL2": ["USN5", "USN6", "USN7", "USN8"],
+        "USN_POOL3": ["USN9", "USN10", "USN11", "USN12"],
+        "CGW_POOL1": ["CGW1", "CGW2", "CGW3", "CGW4"],
+        "CGW_POOL2": ["CGW5", "CGW6", "CGW7", "CGW8"],
+        "DGW_POOL1": ["DGW1", "DGW2", "DGW3", "DGW4", "DGW5", "DGW6", "DGW7", "DGW8", "DGW9", "DGW10"],
+        "DGW_POOL2": ["DGW11", "DGW12", "DGW13", "DGW14", "DGW15", "DGW16", "DGW17", "DGW18", "DGW19", "DGW20"],
+        "DGW_POOL3": ["DGW21", "DGW22", "DGW23", "DGW24", "DGW25", "DGW26", "DGW27", "DGW28", "DGW29", "DGW30"],
+        "DGW_POOL4": ["DGW31", "DGW32", "DGW33", "DGW34", "DGW35", "DGW36", "DGW37", "DGW38", "DGW39", "DGW40"],
+        "DGW_POOL5": ["DGW41", "DGW42", "DGW43", "DGW44", "DGW45", "DGW46", "DGW47", "DGW48", "DGW49", "DGW50"],
+        "DGW_POOL6": ["DGW51", "DGW52", "DGW53", "DGW54", "DGW55", "DGW56", "DGW57", "DGW58", "DGW59", "DGW60"],
+        "DGW_POOL7": ["DGW61", "DGW62", "DGW63", "DGW64", "DGW65", "DGW66", "DGW67", "DGW68", "DGW69", "DGW70"],
+        "DGW_POOL8": ["DGW71", "DGW72", "DGW73", "DGW74", "DGW75", "DGW76", "DGW77", "DGW78", "DGW79", "DGW80"],
+        "GGSN_POOL1": ["GGSN1","GGSN2", "GGSN3", "GGSN4"],
+        "GGSN_POOL2": ["GGSN5","GGSN6"],
+        "GGSN_POOL3": ["GGSN7", "GGSN8", "GGSN9", "GGSN10", "GGSN11"],
+        "GGSN_POOL4": ["GGSN12", "GGSN13"]
+    }
+
+  }
+}
