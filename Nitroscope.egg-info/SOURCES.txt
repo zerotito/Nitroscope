@@ -1,0 +1,13 @@
+README.md
+setup.py
+Nitroscope.egg-info/PKG-INFO
+Nitroscope.egg-info/SOURCES.txt
+Nitroscope.egg-info/dependency_links.txt
+Nitroscope.egg-info/not-zip-safe
+Nitroscope.egg-info/requires.txt
+Nitroscope.egg-info/top_level.txt
+application/__init__.py
+application/config.py
+application/projects/__init__.py
+application/projects/na/__init__.py
+application/projects/na/na_routes.py
