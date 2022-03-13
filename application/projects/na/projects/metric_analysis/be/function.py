@@ -58,7 +58,7 @@ def metric_apiv2():
     # Loading configuration parameters
     m_config = json.loads(open('{}'.format(CONF_FILE), 'r').read())
     KPI_FOLDER = f'{environ.get("MAIN_FOLDER")}/{m_config["kpi folder"]}'
-    script = f'{environ.get("MAIN_FOLDER")}/{m_config["script"]}'m
+    script = f'{environ.get("MAIN_FOLDER")}/{m_config["script"]}'
 
     transaction_id = datetime.strftime(datetime.today(), '%Y%m%d%H%M%S')
     json_data = request.get_json(force=True)
