@@ -1,8 +1,8 @@
 {
   "title": "Metric Analysis",
   "webpage": "fe/fe.html",
-  "kpi folder": "Z:\\NITROSCOPE\\NITROSCOPE\\application\\db",
-  "script": "Z:\\NITROSCOPE\\NITROSCOPE\\application\\common\\ad_fe.py",
+  "kpi folder": "application/db",
+  "script": "application/common/ad_fe.py",
   "config": {
     "groups": {
       "CGW": {

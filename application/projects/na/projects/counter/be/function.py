@@ -1,4 +1,5 @@
 import os, sys, json
+from os import environ
 import pandas as pd
 from flask import render_template, request, jsonify
 import socket
@@ -43,7 +44,7 @@ def counter_apiv1():
 
     # Loading configuration parameters
     module_config = json.loads(open('{}'.format(CONF_FILE), 'r').read())
-    KPI_FOLDER = module_config["kpi folder"]
+    KPI_FOLDER = f'{environ.get("MAIN_FOLDER")}/{module_config["kpi folder"]}'
     json_data = request.get_json(force=True)
     cluster = json_data['node type']
     counter_list = []
@@ -73,7 +74,7 @@ def counter_apiv2():
 
     # Loading configuration parameters
     module_config = json.loads(open('{}'.format(CONF_FILE), 'r').read())
-    KPI_FOLDER = module_config["kpi folder"]
+    KPI_FOLDER = f'{environ.get("MAIN_FOLDER")}/{module_config["kpi folder"]}'
 
     transaction_id = datetime.strftime(datetime.today(), '%Y%m%d%H%M%S')
     json_data = request.get_json(force=True)
@@ -128,7 +129,7 @@ def counter_apiv3():
 def counter_apiv4():
 
     module_config = json.loads(open('{}'.format(CONF_FILE), 'r').read())
-    KPI_FOLDER = module_config["kpi folder"]
+    KPI_FOLDER = f'{environ.get("MAIN_FOLDER")}/{module_config["kpi folder"]}'
 
     json_data = request.get_json(force=True)
 
