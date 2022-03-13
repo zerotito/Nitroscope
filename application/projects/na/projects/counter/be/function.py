@@ -51,7 +51,7 @@ def counter_apiv1():
     if cluster in module_config["config"]["groups"]:
         table_list = module_config["config"]["groups"][cluster]["table"]
         for table in table_list:
-            file_name = f"{KPI_FOLDER}\\{table}.parquet"
+            file_name = f"{KPI_FOLDER}/{table}.parquet"
             df = pd.read_parquet(file_name, engine="pyarrow")
             df = df.reset_index()
             column_list = list(df.columns)
@@ -85,7 +85,7 @@ def counter_apiv2():
     temp_folder = f"{ABS_PATH}/temp/{transaction_id}"
     os.makedirs(temp_folder, exist_ok=True)
 
-    file_name = f"{KPI_FOLDER}\\{table}.parquet"
+    file_name = f"{KPI_FOLDER}/{table}.parquet"
     df = pd.read_parquet(file_name, engine="pyarrow")
     df = df[["node", kpi]]
     df.reset_index(inplace=True)
@@ -118,7 +118,7 @@ def counter_apiv3():
     table = json_data['table']
     kpi = json_data['kpi']
     temp_folder = json_data['folder']
-    file_name = f'{temp_folder}\\anomaly\\{table}\\{kpi}.json'
+    file_name = f'{temp_folder}/anomaly/{table}/{kpi}.json'
 
     # Alarm Configuration
     graphJSON = json.loads(open(file_name, 'r').read())
@@ -136,7 +136,7 @@ def counter_apiv4():
     selected_date = json_data['date']
     temp_folder = json_data['folder']
 
-    alarm_file = f'{KPI_FOLDER}\\alarms.parquet'
+    alarm_file = f'{KPI_FOLDER}/alarms.parquet'
     df = pd.read_parquet(alarm_file, engine="pyarrow")
     df = df.reset_index()
     sdt = datetime.strptime(selected_date, "%Y-%m-%d %H:%M")

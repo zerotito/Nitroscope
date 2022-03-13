@@ -3,7 +3,7 @@ from libraries import *
 log_types = ["STARTED", "FINISHED", "ERROR"]
 CUR_DIRECTORY = os.path.dirname(__file__)
 ABS_PATH = os.path.abspath(os.path.join(CUR_DIRECTORY, os.pardir))
-KPI_FOLDER = f"{ABS_PATH}\\db"
+KPI_FOLDER = f"{ABS_PATH}/db"
 ad_config = {
     "levels": {
         "minor": "1",
@@ -175,7 +175,7 @@ def prepare_plot_from_list_fe(s):
     fig.update_yaxes(pc.yaxes_config)
     for e in changepoints:
         fig.add_vline(x=e, line_width=3, line_dash="dash", line_color="purple")
-    fig.write_json(f'{T_PLOT_FOLDER}\\{s["kpi id"]}.json')
+    fig.write_json(f'{T_PLOT_FOLDER}/{s["kpi id"]}.json')
 
 
 def resample_dataframe(df, typ, freq, len_level=2):

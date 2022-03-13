@@ -22,7 +22,7 @@ try:
     node = config["node"]
     temp_folder = config["temp folder"]
     table_list = config["table list"]
-    ANOMALY_FOLDER = f"{temp_folder}\\anomaly"
+    ANOMALY_FOLDER = f"{temp_folder}/anomaly"
     os.makedirs(ANOMALY_FOLDER, exist_ok=True)
     fn_alarm_detail = f"{KPI_FOLDER}/alarms.parquet"
     fn_alarm_trend = f"{temp_folder}/alarm_trend.json"
@@ -44,7 +44,7 @@ if __name__ == '__main__':
         global_trend[table] = []
         global_anomalies[table] = []
         global_info[table] = {}
-        KPI_FILE = f'{KPI_FOLDER}\\{table}.parquet'
+        KPI_FILE = f'{KPI_FOLDER}/{table}.parquet'
         logging.info(f"Fetching Table : {table}")
         df_data = pd.read_parquet(KPI_FILE, engine="pyarrow", filters=[(OBJECT_COLUMN, '==', node)])
         kpi_list = list(df_data.columns)
@@ -63,7 +63,7 @@ if __name__ == '__main__':
 
     logging.info("Figuring Anomalies")
     for table, gas in global_anomalies.items():
-        T_PLOT_FOLDER = f'{ANOMALY_FOLDER}\\{table}'
+        T_PLOT_FOLDER = f'{ANOMALY_FOLDER}/{table}'
         os.makedirs(T_PLOT_FOLDER, exist_ok=True)
         for e in gas:
             e["folder"] = T_PLOT_FOLDER
