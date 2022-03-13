@@ -16,5 +16,5 @@ function update2(){
         "node type": document.getElementById('node_type').value,
         "cluster": document.getElementById('cluster').value
         }
-    fetch_list_data(json_data, "http://127.0.0.1:3000/na/metrics/apiv1")
+    fetch_list_data(json_data, window.location.href + "/apiv1")
 }
